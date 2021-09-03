@@ -20,14 +20,19 @@ def run
     
 end
 
+# check if it's a positive integer
+def integer?(input)
+    input[/[0-9]+/] == input
+end
+
 #make sure sure this is an integer
 def input_handling(question)
     puts question
     while true do
         input = gets.chomp
         # used Regex to check if it's a whole number
-        unless input.match(/[^0-9]/)
-            if input.to_i < 1581
+        if integer?(input)
+            if input.to_i < 1582
                 puts "\nLeap years did not exist until 1582"
                 puts "\n"+question
                 next
