@@ -9,7 +9,6 @@ while true do
 # this puts any space character in an array   check if the word is ""
     if  answer.scan(/\s/).length != 0 || answer.empty?
         break
-
     else
         word_list << answer
     end
